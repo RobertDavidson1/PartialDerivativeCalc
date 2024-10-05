@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bento Box Layout with CSS Grid</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{{ url_for('static', filename='css/styles.css') }}"
+        />
+
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{{ url_for('static', filename='css/popup.css') }}"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script
+            id="MathJax-script"
+            async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        ></script>
+    </head>
+    <body>
+        <header>
+            <h1>Partial Derivative Calculator</h1>
+        </header>
+        <main class="container">
+            <section class="card top-col1">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <input
+                        type="text"
+                        id="function-input"
+                        class="full-width"
+                        placeholder="Enter a function"
+                    />
+                </div>
+            </section>
+            <section class="card top-col2 gradient-small">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <i class="fas fa-arrow-right fa-2x" aria-hidden="true"></i>
+                </div>
+            </section>
+
+            <section class="card mid-col1">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="math">\( \frac{\partial}{\partial x} \)</div>
+                </div>
+            </section>
+            <section class="card mid-col2">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="math">
+                        \( \frac{\partial^2}{\partial x^2} \)
+                    </div>
+                </div>
+            </section>
+            <section class="card mid-col3">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="math">
+                        \( \frac{\partial^2}{\partial x\partial y} \)
+                    </div>
+                </div>
+            </section>
+
+            <section class="card bottom-col1 gradient-small">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <a
+                        href="https://www.linkedin.com/in/robert-davidson-45108b2b6/"
+                        target="_blank"
+                        aria-label="LinkedIn"
+                    >
+                        <i
+                            class="fab fa-linkedin-in fa-3x"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
+                </div>
+            </section>
+            <section class="card bottom-col2 gradient-small">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <a
+                        href="https://github.com/RobertDavidson1"
+                        target="_blank"
+                        aria-label="GitHub"
+                    >
+                        <i class="fab fa-github fa-3x" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="card bottom-col3">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <h3>Graph (Coming Soon)</h3>
+                </div>
+            </section>
+        </main>
+
+        <div id="myModal" class="modal">
+            <div class="modal-container">
+                <div class="top-bar">
+                    <div class="top-text"><p>Partial Derivative Result</p></div>
+                    <div class="back-arrow close">
+                        <i
+                            class="fas fa-arrow-right fa-2x"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+                </div>
+                <div class="results-container" id="modal-body">
+                    <div class="results"></div>
+                    <div class="results"></div>
+                    <div class="results"></div>
+                    <div class="results"></div>
+                    <div class="results"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='js/card.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+    </body>
+</html>

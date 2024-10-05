@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Results</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{{ url_for('static', filename='css/popup.css') }}"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <div id="myModal" class="container modal">
+            <div class="top-bar">
+                <div class="top-text"><p>Partial Derivative Result</p></div>
+                <div class="back-arrow close">
+                    <i class="fas fa-arrow-right fa-2x" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="results-container" id="modal-body">
+                <!-- Dynamic Content Goes Here -->
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='popup.js') }}"></script>
+    </body>
+</html>
