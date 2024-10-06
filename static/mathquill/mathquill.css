@@ -55,9 +55,7 @@
   border-color: #709AC0;
   border-radius: 1px;
 }
-.mq-math-mode .mq-editable-field {
-  margin: 1px;
-}
+
 .mq-editable-field .mq-latex-command-input {
   color: inherit;
   font-family: "Courier New", monospace;

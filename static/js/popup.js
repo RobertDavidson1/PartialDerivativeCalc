@@ -1,37 +1,56 @@
+// modal.js
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Get the modal element by its ID
-    var modal = document.getElementById('myModal');
+    // Get all math cards
+    const mathCards = document.querySelectorAll('.math-card');
 
-    // Get all middle row sections (use their class names)
-    var middleRows = document.querySelectorAll(
-        '.mid-col1, .mid-col2, .mid-col3',
-    );
+    // Get all close buttons
+    const closeButtons = document.querySelectorAll('.close-modal');
 
-    // Add a click event listener to each middle row element
-    middleRows.forEach(function (card) {
+    // Add click event to each math card to open the respective modal
+    mathCards.forEach(function (card) {
         card.addEventListener('click', function () {
-            // Optional: Populate modal content here before showing
-            // Example:
-            // document.getElementById('modal-body').innerHTML = '<p>Your dynamic content</p>';
-
-            modal.classList.add('show'); // Add 'show' class to display the modal
+            const modalId = card.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'flex';
+                // Trigger MathJax to typeset the newly added LaTeX
+                if (typeof MathJax !== 'undefined') {
+                    MathJax.typesetPromise([modal]).catch(function (err) {
+                        console.error('MathJax typeset failed: ' + err.message);
+                    });
+                }
+            }
         });
     });
 
-    // Close button inside the modal
-    var closeButton = document.querySelector('.modal .close');
-
-    // Add an event listener to close the modal
-    if (closeButton) {
-        closeButton.addEventListener('click', function () {
-            modal.classList.remove('show'); // Remove 'show' class to hide the modal
+    // Add click event to each close button to close the modal
+    closeButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            const modal = btn.closest('.modal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
         });
-    }
+    });
 
-    // Optional: close the modal when clicking anywhere outside of it
+    // Add click event outside the modal content to close the modal
     window.addEventListener('click', function (event) {
-        if (event.target === modal) {
-            modal.classList.remove('show');
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(function (modal) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    // Add keyboard event to close modals with the Escape key
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(function (modal) {
+                modal.style.display = 'none';
+            });
         }
     });
 });
