@@ -4,8 +4,13 @@
     --overlay: #1e2030;
 
     --red: rgb(237, 135, 150);
+    --orange: rgb(250, 179, 135);
+    --yellow: rgb(249, 226, 175);
     --green: rgb(186, 220, 88);
-    --blue: rgb(138, 173, 244)
+    --blue: rgb(138, 173, 244); 
+    --lavender: rgb(180, 190, 254);
+    --purple: rgb(203, 155, 247); 
+    --text : rgb(205, 214, 244)
 }
 
 * {
@@ -21,7 +26,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--base); 
-    color: #CCCCCC;
+    color: var(--text);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -115,13 +120,71 @@ h1 {
     z-index: 1;
 }
 
-.math-card > .card-border {
+.top-col1 > .card-border {
+    background: radial-gradient(
+        var(--gradient-size, 500px) circle at var(--x, 50%) var(--y, 50%), 
+        var(--yellow),
+        transparent 40%
+    );
+}
+
+
+.top-col2 > .card-border {
+    background: radial-gradient(
+        var(--gradient-size, 500px) circle at var(--x, 50%) var(--y, 50%), 
+        var(--purple),
+        transparent 40%
+    );
+}
+
+
+.math-1> .card-border {
+    background: radial-gradient(
+        var(--gradient-size, 500px) circle at var(--x, 50%) var(--y, 50%), 
+        var(--red),
+        transparent 40%
+    );
+} 
+
+.math-2> .card-border {
     background: radial-gradient(
         var(--gradient-size, 500px) circle at var(--x, 50%) var(--y, 50%), 
         var(--blue),
         transparent 40%
     );
 } 
+
+.math-3> .card-border {
+    background: radial-gradient(
+        var(--gradient-size, 500px) circle at var(--x, 50%) var(--y, 50%), 
+        var(--green),
+        transparent 40%
+    );
+} 
+
+.bottom-col1 > .card-border {
+    background: radial-gradient(
+        var(--gradient-size, 500px) circle at var(--x, 50%) var(--y, 50%), 
+        var(--orange),
+        transparent 40%
+    );
+}
+
+.bottom-col2 > .card-border {
+    background: radial-gradient(
+        var(--gradient-size, 500px) circle at var(--x, 50%) var(--y, 50%), 
+        var(--lavender),
+        transparent 40%
+    );
+}
+
+.bottom-col2 > .card-border {
+    background: radial-gradient(
+        var(--gradient-size, 500px) circle at var(--x, 50%) var(--y, 50%), 
+        var(--text),
+        transparent 40%
+    );
+}
 
 .gradient-small {
     --gradient-size: 150px;
@@ -195,12 +258,12 @@ h1 {
 /* MathJax Styling */
 .math {
     font-size: 3.5em;
-    color: #CCCCCC;
+    color: var(--text);
 }
 
 /* Links */
 a {
-    color: #CCCCCC;
+    color: var(--text);
     text-decoration: none;
 }
 
