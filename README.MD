@@ -1,4 +1,4 @@
- --># Partial Derivative Calculator
+# Partial Derivative Calculator
 
 This project is a web-based application for calculating partial derivatives of mathematical functions. It leverages Flask for the backend, SymPy for symbolic mathematics, and MathQuill for rendering mathematical expressions.
 
