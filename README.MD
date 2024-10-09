@@ -1,4 +1,6 @@
-<img src="imgs/screenshot.png" width="700" height="468" />
+<div style="text-align: center;">
+    <img src="imgs/screenshot.png" width="700" height="468" />
+</div>
 
 
 
