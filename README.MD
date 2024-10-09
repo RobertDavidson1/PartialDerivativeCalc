@@ -1,6 +1,7 @@
-<div style="text-align: center;">
+<div style="display: flex; justify-content: center;">
     <img src="imgs/screenshot.png" width="700" height="468" />
 </div>
+
 
 
 
