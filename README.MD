@@ -1,4 +1,5 @@
-<img src='imgs/screenshot.png'/>
+<img src="imgs/screenshot.png" width="300" height="200" />
+
 
 
 # Partial Derivative Calculator
