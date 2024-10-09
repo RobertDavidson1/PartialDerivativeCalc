@@ -20,15 +20,15 @@ def index():
                 raise ValueError("No variables found in the function.")
 
             # Compute first partial derivatives
-            first_partials = {str(var): sp.latex(sp.simplify(function.diff(var))) for var in variables}
+            first_partials = {str(var): sp.latex(sp.simplify(sp.factor((function.diff(var))))) for var in variables}
 
             # Compute second pure partial derivatives
-            second_pure_partials = {str(var): sp.latex(sp.simplify(function.diff(var, var))) for var in variables}
+            second_pure_partials = {str(var): sp.latex(sp.simplify(sp.factor(function.diff(var, var)))) for var in variables}
 
             # Compute second mixed partial derivatives
             second_mixed_partials = {}
             for var1, var2 in combinations(variables, 2):
-                derivative = sp.latex(sp.simplify(function.diff(var1, var2)))
+                derivative = sp.latex(sp.simplify(sp.factor(function.diff(var1, var2))))
                 second_mixed_partials[f"{var1} {var2}"] = derivative
                 # If you want to include both (x,y) and (y,x), uncomment the next line
                 # second_mixed_partials[f"{var2} {var1}"] = derivative
