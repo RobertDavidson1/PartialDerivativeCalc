@@ -1,4 +1,4 @@
-<img src="imgs/screenshot.png" width="300" height="200" />
+<img src="imgs/screenshot.png" width="700" height="468" />
 
 
 
