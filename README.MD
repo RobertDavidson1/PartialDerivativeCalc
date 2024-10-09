@@ -70,5 +70,3 @@ This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE
 - [MathQuill](http://mathquill.com/)
 - [SymPy](https://www.sympy.org/en/index.html)
 - [Flask](https://flask.palletsprojects.com/)
-
-Feel free to contribute to this project by submitting issues or pull requests.
