@@ -31,11 +31,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     position: relative;
+    justify-content: center;
 }
 
 h1 {
+    margin-bottom: 50px;
     justify-content: space-between;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -49,13 +50,12 @@ h1 {
     -webkit-text-fill-color: transparent;
 
     font-size: 3em;
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+
 }
 
+
 .container {
+    margin-top: 50px;
     display: grid;
     width: 1000px;
     height: 500px;
@@ -138,9 +138,10 @@ h1 {
 .top-col2 > .card-border {
     background: radial-gradient(
         var(--gradient-size, 500px) circle at var(--x, 50%) var(--y, 50%), 
-        var(--purple),
+        var(--text),
         transparent 40%
     );
+
 }
 
 
@@ -196,8 +197,6 @@ h1 {
     --gradient-size: 150px;
 }
 
-
-
 .card > .card-content {
     display: flex;
     align-items: center;
@@ -218,6 +217,7 @@ h1 {
 
 .top-col1 { --grid-area: top-col1; }
 .top-col2 { 
+    
     --grid-area: top-col2; 
     display: flex;
     align-items: center;
