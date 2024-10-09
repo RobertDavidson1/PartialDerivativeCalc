@@ -1,7 +1,7 @@
 # Partial Derivative Calculator
 ___
 <p align=center>
-<img src="imgs/screenshot.png" width="700" height="468" />
+<img src="imgs/screenshot.png" width="350" height="234" />
 </p>
 
 ___
