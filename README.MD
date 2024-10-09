@@ -7,13 +7,6 @@ ___
 
 This project is a web-based application for calculating partial derivatives of mathematical functions. It leverages Flask for the backend, SymPy for symbolic mathematics, and MathQuill for rendering mathematical expressions.
 
-## Features
-
-- **Latex Parsing**: Converts LaTeX input into SymPy expressions.
-- **Partial Derivatives**: Computes first and second partial derivatives.
-- **Interactive UI**: Uses MathQuill for an interactive math input field.
-- **Modal Popups**: Displays results in modal popups.
-
 ## Technologies Used
 
 - **Flask**: A micro web framework for Python.
